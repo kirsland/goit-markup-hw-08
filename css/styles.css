@@ -1,0 +1,31 @@
+:root {
+    --main-color: #000000;
+    --main-bg-color: #ffffff;
+    --adcolor1: #2196F3;
+}
+body {
+    background-color: var(--main-bg-color);
+    color :var(--main-color);
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.logo {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+}
+.logo-adcolor {
+    color: var(--adcolor1);
+}
+.logo:hover,
+.logo:focus {
+    opacity: 0.7;
+}
