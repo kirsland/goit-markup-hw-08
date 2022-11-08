@@ -85,6 +85,10 @@ ul {
     cursor: pointer;
 }
 
+.advantages .sub-title-hidden {
+    display: none;
+}
+
 .advantages .sub-title {
     font-weight: 700;
     font-size: 14px;
@@ -181,6 +185,10 @@ ul {
 /* end footer styles */
 
 /* start portfolio main content */
+
+.works-filter .sub-title-hidden {
+    display: none;
+}
 
 .works-filter .button {
     font-weight: 500;
