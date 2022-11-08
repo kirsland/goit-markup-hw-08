@@ -1,18 +1,31 @@
 :root {
-    --main-color: #000000;
-    --main-bg-color: #ffffff;
-    --adcolor1: #2196F3;
+    --main-color-dark: #000000;
+    --main-color-middle: #757575;
+    --main-color-light: #FFFFFF;
+    --main-bg-color-light: #ffffff;
+    --main-bg-color-middle: #F5F4FA;
+    --main-bg-color-dark: #2F303A;
+    --ad-color-light: #2196F3;
+    --ad-color-dark: #212121;
+    --main-font: 'Roboto', arial, sans-serif;
 }
 body {
-    background-color: var(--main-bg-color);
-    color :var(--main-color);
+    background-color: var(--main-bg-color-light);
+    color :var(--main-color-dark);
+    font-family: var(--main-font);
+    font-style: normal;
 }
+
 a {
     text-decoration: none;
 }
+
 ul {
     list-style: none;
 }
+
+/* start header styles */
+
 .logo {
     font-family: 'Raleway';
     font-style: normal;
@@ -20,12 +33,188 @@ ul {
     font-size: 26px;
     line-height: 31px;
     letter-spacing: 0.03em;
-    color: var(--main-color);
+    color: var(--main-color-dark);
 }
-.logo-adcolor {
-    color: var(--adcolor1);
+
+.logo-adcolor,
+.main-menu-list .link:hover,
+.main-menu-list .link:focus,
+.contacts-list .link:hover,
+.contacts-list .link:focus {
+    color: var(--ad-color-light);
 }
+
 .logo:hover,
 .logo:focus {
     opacity: 0.7;
 }
+
+.main-menu-list .link,
+.contacts-list .link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-color-dark);
+}
+
+/* end header styles */
+
+/* start main  styles */
+
+.banner {
+    background-color: var(--main-bg-color-dark);
+}
+
+.banner .title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 11.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--main-color-light);
+}
+
+.banner .button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    color: var(--main-color-light);
+    background-color: var(--ad-color-light);
+    cursor: pointer;
+}
+
+.advantages .sub-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: left;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ad-color-dark);
+}
+
+.advantages .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    color: var(--main-color-middle);
+}
+
+.sub-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--ad-color-dark);
+}
+
+.team {
+    background-color: var(--main-bg-color-middle);
+}
+
+.team .subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--ad-color-dark);
+}
+
+.team .sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--ad-color-dark);
+}
+
+.team .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-color-middle);
+}
+
+/* start main  styles */
+
+/* start footer styles */
+
+.footer-info {
+    background-color: var(--main-bg-color-dark);
+}
+
+.footer-info .logo {
+    color: var(--main-color-light);
+}
+
+.logo-adcolor-footer {
+    color: var(--ad-color-light);
+}
+
+.footer-info .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--main-color-light);
+    font-style: normal;
+}
+
+.footer-contacts-list .link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--main-color-light);
+    opacity: 0.6;
+    font-style: normal;
+}
+
+/* end footer styles */
+
+/* start portfolio main content */
+
+.works-filter .button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ad-color-dark);
+    background-color: var(--main-bg-color-middle);
+    cursor: pointer;
+}
+
+.works-filter .button:hover,
+.works-filter .button:focus {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--main-color-light);
+    background-color: var(--ad-color-light);
+}
+
+.work-list .sub-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--ad-color-dark);
+    text-align: left;
+}
+
+.work-list .text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: var(--main-color-middle);
+}
+
+/* end portfolio main content */
