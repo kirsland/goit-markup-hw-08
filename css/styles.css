@@ -13,7 +13,6 @@ body {
     background-color: var(--main-bg-color-light);
     color :var(--main-color-dark);
     font-family: var(--main-font);
-    font-style: normal;
 }
 
 a {
@@ -36,26 +35,22 @@ ul {
     color: var(--main-color-dark);
 }
 
-.logo-adcolor,
-.main-menu-list .link:hover,
-.main-menu-list .link:focus,
-.contacts-list .link:hover,
-.contacts-list .link:focus {
-    color: var(--ad-color-light);
-}
-
-.logo:hover,
-.logo:focus {
-    opacity: 0.7;
-}
-
 .main-menu-list .link,
-.contacts-list .link {
+.link-e-mail,
+.link-tel {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-color-dark);
+}
+
+.logo-adcolor,
+.main-menu-list .link:hover,
+.main-menu-list .link:focus,
+.link-e-mail:hover,
+.link-e-mail:focus {
+    color: var(--ad-color-light);
 }
 
 /* end header styles */
@@ -66,10 +61,10 @@ ul {
     background-color: var(--main-bg-color-dark);
 }
 
-.banner .title {
+.banner .hero-title {
     font-weight: 900;
     font-size: 44px;
-    line-height: 11.36;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -77,19 +72,26 @@ ul {
 }
 
 .banner .button {
+    font-family: var(--main-font);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    letter-spacing: 0.06em;
     color: var(--main-color-light);
     background-color: var(--ad-color-light);
     cursor: pointer;
 }
 
-.advantages .sub-title-hidden {
+.banner .button:hover,
+.banner .button:focus {
+    background-color: #188CE8;;
+}
+
+.advantages .title-hidden {
     display: none;
 }
 
-.advantages .sub-title {
+.advantages .title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -99,18 +101,26 @@ ul {
     color: var(--ad-color-dark);
 }
 
+.advantages .sub-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ad-color-dark);
+}
+
 .advantages .text {
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--main-color-middle);
 }
 
-.sub-title {
+.title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.16;
+    line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--ad-color-dark);
@@ -120,13 +130,8 @@ ul {
     background-color: var(--main-bg-color-middle);
 }
 
-.team .subtitle {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--ad-color-dark);
+.team-item {
+    background-color: var(--main-bg-color-light);
 }
 
 .team .sub-title {
@@ -139,7 +144,6 @@ ul {
 }
 
 .team .text {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -164,7 +168,6 @@ ul {
 }
 
 .footer-info .text {
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -172,8 +175,8 @@ ul {
     font-style: normal;
 }
 
-.footer-contacts-list .link {
-    font-weight: 400;
+.footer-contacts-list .link-e-mail,
+.footer-contacts-list .link-tel {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -182,11 +185,17 @@ ul {
     font-style: normal;
 }
 
+.footer-contacts-list .link-e-mail:hover,
+.footer-contacts-list .link-tel:focus {
+    color: var(--ad-color-light);
+    opacity: 1;
+}
+
 /* end footer styles */
 
 /* start portfolio main content */
 
-.works-filter .sub-title-hidden {
+.title-hidden {
     display: none;
 }
 
@@ -194,6 +203,7 @@ ul {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
+    letter-spacing: 0.03em;
     color: var(--ad-color-dark);
     background-color: var(--main-bg-color-middle);
     cursor: pointer;
@@ -201,9 +211,6 @@ ul {
 
 .works-filter .button:hover,
 .works-filter .button:focus {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.6;
     color: var(--main-color-light);
     background-color: var(--ad-color-light);
 }
@@ -218,7 +225,6 @@ ul {
 }
 
 .work-list .text {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
