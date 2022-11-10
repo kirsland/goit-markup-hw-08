@@ -35,14 +35,21 @@ ul {
     color: var(--main-color-dark);
 }
 
-.main-menu-list .link,
+.main-menu-list .link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--main-color-dark);
+}
+
 .link-e-mail,
 .link-tel {
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--main-color-dark);
+    color: var(--main-color-middle);
 }
 
 .logo-adcolor,
