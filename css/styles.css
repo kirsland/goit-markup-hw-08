@@ -197,6 +197,7 @@ header {
 
 .photos-tile .container {
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .photos-tile .title {
@@ -319,14 +320,16 @@ header {
 
 .footer-contacts .link-e-mail,
 .footer-contacts .link-tel {
-    margin: 0 0 9px 0;
-
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--main-color-light);
     opacity: 0.6;
     font-style: normal;
+}
+
+.footer-contacts .link-e-mail {
+    margin: 0 0 9px 0;
 }
 
 .footer-contacts .link-e-mail:hover,
