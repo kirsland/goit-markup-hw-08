@@ -19,96 +19,164 @@ a {
     text-decoration: none;
 }
 
-ul {
+.list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* start header styles */
+/* Header */
+
+header {
+    outline: 1px solid #ECECEC;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
 
 .logo {
+    display: block;
+
+    color: var(--main-color-dark);
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
     letter-spacing: 0.03em;
-    color: var(--main-color-dark);
 }
 
-.main-menu-list .link {
+.site-nav {
+    display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav .item:first-child {
+    margin-left: 93px;
+}
+
+.site-nav .link {
+    display: block;
+    padding: 32px 0;
+
+    color: var(--main-color-dark);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--main-color-dark);
+}
+
+.header-contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.header-contacts .item + .item {
+    margin-left: 50px;
 }
 
 .link-e-mail,
 .link-tel {
+    display: block;
+
+    color: var(--main-color-middle);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color: var(--main-color-middle);
 }
 
 .logo-adcolor,
-.main-menu-list .link:hover,
-.main-menu-list .link:focus,
+.site-nav .link:hover,
+.site-nav .link:focus,
 .link-e-mail:hover,
 .link-e-mail:focus {
     color: var(--ad-color-light);
 }
 
-/* end header styles */
+/* Banner on top */
 
-/* start main  styles */
-
-.banner {
+.hero {
     background-color: var(--main-bg-color-dark);
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    text-align: c;
 }
 
-.banner .hero-title {
+.hero-title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    color: var(--main-color-light);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
+    max-width: 696px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--main-color-light);
 }
 
-.banner .button {
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    min-width: 216px;
+
+    background-color: var(--ad-color-light);
+    border-radius: 4px;
+    border-color: var(--ad-color-light);
+    color: var(--main-color-light);
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    color: var(--main-color-light);
-    background-color: var(--ad-color-light);
     cursor: pointer;
 }
 
-.banner .button:hover,
-.banner .button:focus {
+.button:hover,
+.button:focus {
     background-color: #188CE8;;
+}
+
+/* Company advantages */
+
+.container .advantages-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 94px;
 }
 
 .advantages .title-hidden {
     display: none;
 }
 
-.advantages .title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: left;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--ad-color-dark);
+.advantages-item {
+    width: calc((100%-90px) / 4);
+}
+
+.advantages-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .advantages .sub-title {
+    margin: 0 0 10px 0;
+    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -122,9 +190,57 @@ ul {
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--main-color-middle);
+    margin: 0;
 }
 
-.title {
+/* What we are do */
+
+.photos-tile .container {
+    padding-top: 94px;
+}
+
+.photos-tile .title {
+    margin: 0 0 50px 0;
+
+    color: var(--ad-color-dark);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.67;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.photos-tile .list {
+    display: flex;
+}
+
+.photos-tile .item {
+    width: calc((100% - 60px) / 3);
+}
+
+.photos-tile .item:not(:nth-child(3n)) {
+    margin-right: 30px;
+}
+
+/* Our team */
+
+.team .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.team {
+    background-color: var(--main-bg-color-middle);
+}
+
+.team .list {
+    display: flex;
+}
+
+.team .title {
+    margin: 0 0 50px 0;
+
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -133,15 +249,25 @@ ul {
     color: var(--ad-color-dark);
 }
 
-.team {
-    background-color: var(--main-bg-color-middle);
+.team-item {
+    width: 270px;
+
+    background-color: var(--main-bg-color-light);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-item {
-    background-color: var(--main-bg-color-light);
+    margin-right: 30px ;
+}
+
+.team-item:nth-child(4n) {
+    margin-right: 0 ;
 }
 
 .team .sub-title {
+    margin: 30px 0 10px 0;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -151,6 +277,8 @@ ul {
 }
 
 .team .text {
+    margin: 0 0 30px 0;
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -158,15 +286,20 @@ ul {
     color: var(--main-color-middle);
 }
 
-/* start main  styles */
-
-/* start footer styles */
+/* Footer */
 
 .footer-info {
     background-color: var(--main-bg-color-dark);
 }
 
+.footer-info .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .footer-info .logo {
+    margin: 0 0 20px 0;
+
     color: var(--main-color-light);
 }
 
@@ -175,6 +308,8 @@ ul {
 }
 
 .footer-info .text {
+    margin: 0 0 9px 0;
+
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -182,8 +317,10 @@ ul {
     font-style: normal;
 }
 
-.footer-contacts-list .link-e-mail,
-.footer-contacts-list .link-tel {
+.footer-contacts .link-e-mail,
+.footer-contacts .link-tel {
+    margin: 0 0 9px 0;
+
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -192,37 +329,85 @@ ul {
     font-style: normal;
 }
 
-.footer-contacts-list .link-e-mail:hover,
-.footer-contacts-list .link-tel:focus {
+.footer-contacts .link-e-mail:hover,
+.footer-contacts .link-tel:focus {
     color: var(--ad-color-light);
     opacity: 1;
 }
 
-/* end footer styles */
+/* Portfolio */
 
-/* start portfolio main content */
+/* Filter buttons */
+
+.portfolio .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .title-hidden {
     display: none;
 }
 
-.works-filter .button {
+.filter-buttons .list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 56px;
+}
+
+.filter-buttons .item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.portfolio .filter-button {
+    /* display: block; */
+    padding: 6px 25px;
+    min-width: 73px;
+
+    background-color: var(--main-bg-color-middle);
+    border-radius: 4px;
+    border: var(--main-bg-color-middle);
+    font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.03em;
     color: var(--ad-color-dark);
-    background-color: var(--main-bg-color-middle);
-    cursor: pointer;
+    cursor: pointer;;
 }
 
-.works-filter .button:hover,
-.works-filter .button:focus {
+.portfolio .filter-button:hover,
+.portfolio .filter-button:focus {
     color: var(--main-color-light);
     background-color: var(--ad-color-light);
+    border-color: var(--ad-color-light);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Portfolio works list */
+
+.work-list .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-list .item {
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #EEEEEE;
+}
+
+.work-list .item:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.work-list .item:nth-last-child(-n + 3) {
+    margin-bottom: 0px;
 }
 
 .work-list .sub-title {
+    margin: 0 24px 4px 24px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -232,10 +417,10 @@ ul {
 }
 
 .work-list .text {
+    margin: 0 24px 20px 24px;
+    
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--main-color-middle);
 }
-
-/* end portfolio main content */
