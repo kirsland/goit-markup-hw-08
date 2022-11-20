@@ -72,7 +72,7 @@ header {
     margin-right: 50px;
 }
 
-.main-menu {
+.site-nav {
     margin-left: 93px;
 }
 
@@ -239,7 +239,6 @@ header {
 .team .title {
     margin: 0 0 50px 0;
 
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -260,9 +259,12 @@ header {
     margin-right: 30px;
 }
 
-.team .sub-title {
-    margin: 30px 0 10px 0;
+.teammember-info {
+    padding: 30px 0;
+}
 
+.team .sub-title {
+    margin: 0 0 10px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -272,8 +274,7 @@ header {
 }
 
 .team .text {
-    margin: 0 0 30px 0;
-
+    margin: 0;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -284,6 +285,7 @@ header {
 /* Footer */
 
 .footer-info {
+    padding: 94px 0;
     background-color: var(--main-bg-color-dark);
 }
 
