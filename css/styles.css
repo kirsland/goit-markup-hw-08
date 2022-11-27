@@ -93,18 +93,23 @@ header {
 }
 
 .header-contacts .item + .item {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .link-e-mail,
 .link-tel {
-    display: block;
+    display: flex;
 
     color: var(--main-color-middle);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+}
+
+.contact-icon {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 .logo-adcolor,
@@ -117,10 +122,23 @@ header {
 
 /* Banner on top */
 
-.hero {
-    background-color: var(--main-bg-color-dark);
+.hero.section {
     padding-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom: 400px;
+    max-width: 1600px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+        ),
+        url(../img/bgimg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -280,6 +298,54 @@ header {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-color-middle);
+}
+
+/* Our clients */
+
+.clients .title {
+    margin: 0 0 50px 0;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--ad-color-dark);
+}
+
+.clients .list {
+    display: flex;
+}
+
+.client-logo-box {
+    padding: 16px 32px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    flex-basis: calc((100% - 180px) / 6);
+    color: #AFB1B8;
+}
+
+.clients-list-item:hover,
+.clients-list-item:focus {
+    border-color: var(--ad-color-light);
+}
+
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-logo {
+    width: 106px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    fill: currentColor;
+}
+
+.client-logo-box:hover,
+.client-logo-box:focus {
+    border-color: var(--ad-color-light);
+    color: var(--ad-color-light);
 }
 
 /* Footer */
