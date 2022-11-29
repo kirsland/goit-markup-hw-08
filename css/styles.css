@@ -4,6 +4,7 @@
     --main-color-light: #FFFFFF;
     --main-bg-color-light: #ffffff;
     --main-bg-color-middle: #F5F4FA;
+    --main-bg-color-middle-second: #AFB1B8;
     --main-bg-color-dark: #2F303A;
     --ad-color-light: #2196F3;
     --ad-color-dark: #212121;
@@ -96,8 +97,7 @@ header {
     margin-left: 30px;
 }
 
-.link-e-mail,
-.link-tel {
+.link-e-mail {
     display: flex;
 
     color: var(--main-color-middle);
@@ -175,7 +175,7 @@ header {
 
 .button:hover,
 .button:focus {
-    background-color: #188CE8;;
+    background-color: #188CE8;
 }
 
 /* Company advantages */
@@ -190,14 +190,12 @@ header {
 
 .advantages-box {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
     background-color: var(--main-bg-color-middle);
-}
-
-.advantages-icon {
-    margin: auto;
 }
 
 .advantages-item {
@@ -268,7 +266,6 @@ header {
 
 .team .title {
     margin: 0 0 50px 0;
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -279,7 +276,6 @@ header {
 
 .team-item {
     flex-basis: calc((100% - 90px) / 4);
-
     background-color: var(--main-bg-color-light);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -290,7 +286,7 @@ header {
 }
 
 .teammember-info {
-    padding: 30px 32px;
+    padding: 30px 0;
 }
 
 .team .sub-title {
@@ -315,47 +311,44 @@ header {
 .soc-icons.list {
     display: flex;
     justify-content: center;
-}
-
-.soc-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-}
-
-.soc-link {
-    color: #AFB1B8;
-}
-
-.soc-link:hover,
-.soc-link:focus {
-    width: 20px;
-    height: 20px;
-    color: var(--main-bg-color-light);
-}
-
-.soc-icon-background {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    padding: 12px;
-    background-color: transparent;
-}
-
-.soc-icon-background:hover,
-.soc-icon-background:focus {
-    background-color: var(--ad-color-light);
+    align-items: center;
 }
 
 .soc-list-item:not(:last-child) {
     margin-right: 10px;
-} 
+}
+
+.soc-list-item {
+    width: 44px;
+    height: 44px;
+}
+
+.soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    color: var(--main-bg-color-middle-second);
+}
+
+.soc-link:hover,
+.soc-link:focus {
+    background-color: var(--ad-color-light);
+    color: var(--main-bg-color-light);
+}
+
+.soc-icon {
+    fill: currentColor;
+}
 
 /* Our clients */
 
 .clients .title {
     margin: 0 0 50px 0;
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -366,37 +359,33 @@ header {
 
 .clients .list {
     display: flex;
-}
-
-.client-logo-box {
-    padding: 16px 32px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    flex-basis: calc((100% - 180px) / 6);
-    color: #AFB1B8;
-}
-
-.clients-list-item:hover,
-.clients-list-item:focus {
-    border-color: var(--ad-color-light);
+    justify-content: center;
+    align-items: center;
 }
 
 .clients-list-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.client-logo {
-    width: 106px;
-    height: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    fill: currentColor;
+.clients-list-item {
+    width: 170px;
+    height: 92px;
 }
 
-.client-logo-box:hover,
-.client-logo-box:focus {
+.client-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border: 1px solid var(--main-bg-color-middle-second);
+    border-radius: 4px;
+    fill: var(--main-bg-color-middle-second);
+}
+
+.client-link:hover,
+.client-link:focus {
     border-color: var(--ad-color-light);
-    color: var(--ad-color-light);
+    fill: var(--ad-color-light);
 }
 
 /* Footer */
@@ -441,6 +430,8 @@ header {
 }
 
 .footer-contacts .link-e-mail:hover,
+.footer-contacts .link-e-mail:focus,
+.footer-contacts .link-tel:hover,
 .footer-contacts .link-tel:focus {
     color: var(--ad-color-light);
     opacity: 1;
@@ -467,15 +458,12 @@ header {
 }
 
 .footer-info .soc-link {
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--main-color-light)
 }
 
-.footer-info .soc-icon-background {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-info .soc-icon-background:hover,
-.footer-info .soc-icon-background:focus {
+.footer-info .soc-link:hover,
+.footer-info .soc-link:focus {
     background-color: var(--ad-color-light)
 }
 
