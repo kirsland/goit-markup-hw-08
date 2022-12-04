@@ -45,7 +45,7 @@ img {
 /* Header */
 
 header {
-    outline: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .main-nav {
@@ -65,6 +65,10 @@ header {
     letter-spacing: 0.03em;
 }
 
+.logo-adcolor {
+    color: var(--ad-color-light);
+}
+
 .main-menu {
     display: flex;
 }
@@ -80,12 +84,41 @@ header {
 .main-menu .link {
     display: block;
     padding: 32px 0;
+    position: relative;
 
     color: var(--main-color-dark);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-menu .link::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    /* background-color: transparent; */
+    background-color: var(--ad-color-light);
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-menu .link:hover::after,
+.main-menu .link:focus::after,
+.main-menu .link:active::after {
+    /* background-color: var(--ad-color-light); */
+    opacity: 1;
 }
 
 .header-contacts {
@@ -105,6 +138,11 @@ header {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .contact-icon {
@@ -112,12 +150,12 @@ header {
     fill: currentColor;
 }
 
-.logo-adcolor,
 .main-menu .link:hover,
 .main-menu .link:focus,
 .link-e-mail:hover,
 .link-e-mail:focus {
     color: var(--ad-color-light);
+
 }
 
 /* Banner on top */
@@ -171,6 +209,11 @@ header {
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .button:hover,
@@ -248,10 +291,30 @@ header {
 
 .photos-tile .item {
     flex-basis: calc((100% - 60px) / 3);
+    position: relative;
 }
 
 .photos-tile .item:not(:nth-child(3n)) {
     margin-right: 30px;
+}
+
+.photos-tile .image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 27px 0;
+    background-color: rgba(47, 48, 58, 0.8);;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-bg-color-light);
 }
 
 /* Our team */
@@ -333,6 +396,10 @@ header {
     padding: 0;
     background-color: transparent;
     color: var(--main-bg-color-middle-second);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover,
@@ -380,6 +447,10 @@ header {
     border: 1px solid var(--main-bg-color-middle-second);
     border-radius: 4px;
     fill: var(--main-bg-color-middle-second);
+
+    transition-property: border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -423,6 +494,10 @@ header {
     color: var(--main-color-light);
     opacity: 0.6;
     font-style: normal;
+
+    transition-property: color, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contacts .item:first-child {
@@ -499,7 +574,11 @@ header {
     line-height: 1.6;
     letter-spacing: 0.03em;
     color: var(--ad-color-dark);
-    cursor: pointer;;
+    cursor: pointer;
+
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio .filter-button:hover,
@@ -521,6 +600,10 @@ header {
     flex-basis: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-list .item:hover,
@@ -535,6 +618,37 @@ header {
 
 .work-list .item:nth-last-child(-n + 3) {
     margin-bottom: 0px;
+}
+
+.work-list .work-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-list .cover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--main-bg-color-light);
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
+}
+
+.work-list .item:hover .cover-text,
+.work-list .item:focus .cover-text {
+    transform: translateY(0);
 }
 
 .image-info {
@@ -560,4 +674,76 @@ header {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--main-color-middle);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    
+    transition-property: opacity, visibility;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    min-height: 581px;
+    padding: 40px;
+    background-color: var(--main-bg-color-light);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, 100%) scale(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30px;
+    height: 30px;
+    fill: var(--main-color-dark);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: 0;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    fill: var(--ad-color-light);
 }
