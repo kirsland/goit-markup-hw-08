@@ -27,7 +27,7 @@
     border-radius: 4px;
     fill: var(--main-bg-color-middle-second);
 
-    transition-property: border, fill;
+    transition-property: border-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
