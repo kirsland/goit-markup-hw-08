@@ -1,43 +1,79 @@
 .advantages__list {
-    display: flex;
-}
-
-.advantages__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-    background-color: var(--main-bg-color-middle);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages__item {
-    flex-basis: calc((100% - 90px) / 4);
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
+  flex-basis: 100%;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-// .advantages__item:not(:last-child) {
-//     margin-right: 30px;
-// }
+.advantages__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--main-bg-color-middle);
+}
 
 .advantages__sub-title {
-    margin: 0 0 10px 0;
-    
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--ad-color-dark);
+  margin: 0 0 10px 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--ad-color-dark);
 }
 
 .advantages__text {
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: var(--main-color-middle);
-    margin: 0;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--main-color-middle);
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    flex-basis: calc((100% - 30px) / 2);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .advantages__sub-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    flex-basis: calc((100% - 90px) / 4);
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 0;
+    }
+    &:nth-child(n + 2) {
+      margin-right: 0;
+    }
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .advantages__sub-title {
+    text-align: left;
+  }
 }

@@ -1,15 +1,21 @@
 .logo {
-    display: block;
+  display: block;
 
-    color: var(--main-color-dark);
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.03em;
+  color: var(--main-color-dark);
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
 }
 
 .logo-adcolor {
-    color: var(--ad-color-light);
+  color: var(--ad-color-light);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
