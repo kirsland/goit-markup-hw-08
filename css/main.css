@@ -513,6 +513,110 @@ img {
   transform: translateX(0);
 }
 
+.mob-menu__site-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mob-menu__main-menu {
+  margin-bottom: auto;
+}
+
+.mob-menu__link {
+  display: block;
+  color: var(--main-color-dark);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--ad-color-light);
+}
+.mob-menu__link--active {
+  color: var(--ad-color-light);
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__contacts {
+  position: absolute;
+  bottom: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mob-menu__social-items {
+  display: flex;
+  gap: 20px;
+  margin-top: 64px;
+}
+
+.mob-menu__social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1, 22;
+  letter-spacing: 0.02em;
+  color: var(--ad-color-light);
+}
+.mob-menu__social-link:hover, .mob-menu__social-link:focus {
+  color: var(--ad-color-light);
+  opacity: 0.9;
+}
+
+.mob-menu__social-item {
+  position: relative;
+}
+
+.mob-menu__social-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob-menu__link-e-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--main-color-middle);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu__link-e-mail:hover, .mob-menu__link-e-mail:focus {
+  color: var(--main-color-middle);
+  opacity: 0.9;
+}
+
+.mob-menu__item-contact {
+  margin-top: 32px;
+}
+
+.mob-menu__link-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18px;
+  letter-spacing: 0.02em;
+  color: var(--ad-color-light);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu__link-tel:hover, .mob-menu__link-tel:focus {
+  color: var(--ad-color-light);
+  opacity: 0.9;
+}
+
 .hero.section {
   padding-top: 118px;
   padding-bottom: 118px;
