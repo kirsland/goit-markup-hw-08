@@ -172,12 +172,17 @@
   transform: translateX(0);
 }
 
+.mob-menu__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
 .mob-menu__site-nav {
   display: flex;
   flex-direction: column;
-}
-.mob-menu__main-menu {
-  margin-bottom: auto;
 }
 
 .mob-menu__link {
@@ -205,13 +210,6 @@
 
 .mob-menu__item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.mob-menu__contacts {
-  position: absolute;
-  bottom: 48px;
-  display: flex;
-  flex-direction: column;
 }
 
 .mob-menu__social-items {

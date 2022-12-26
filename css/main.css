@@ -513,13 +513,17 @@ img {
   transform: translateX(0);
 }
 
+.mob-menu__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
 .mob-menu__site-nav {
   display: flex;
   flex-direction: column;
-}
-
-.mob-menu__main-menu {
-  margin-bottom: auto;
 }
 
 .mob-menu__link {
@@ -542,13 +546,6 @@ img {
 
 .mob-menu__item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.mob-menu__contacts {
-  position: absolute;
-  bottom: 48px;
-  display: flex;
-  flex-direction: column;
 }
 
 .mob-menu__social-items {
@@ -1164,7 +1161,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
+  width: calc(100% - 30px);
   min-height: 609px;
   padding: 40px;
   background-color: var(--main-bg-color-light);
@@ -1175,16 +1172,6 @@ img {
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, 100%) scale(0);
-}
-
-.modal-title {
-  margin: 0 0 12px 0;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--ad-color-dark);
 }
 
 .modal-close {
@@ -1207,6 +1194,11 @@ img {
   fill: var(--ad-color-light);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1221,6 +1213,16 @@ img {
 .form > .form-field {
   display: flex;
   flex-direction: column;
+}
+
+.modal-title {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--ad-color-dark);
 }
 
 .form-label {
@@ -1314,8 +1316,8 @@ img {
 .checkbox-label {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--main-color-middle);
 }
@@ -1331,7 +1333,6 @@ img {
 .deal-rules-link {
   color: var(--ad-color-light);
   text-decoration: underline;
-  margin-left: 4px;
 }
 
 .checkbox-input {
@@ -1351,6 +1352,12 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 .portfolio__filter-buttons {
   display: flex;
   flex-wrap: wrap;
